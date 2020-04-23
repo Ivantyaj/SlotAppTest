@@ -9,6 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var symbols = ["apple", "star", "cherry"]
+    
+    @State private var numbers = [0, 2, 1]
+    @State private var credits = 1000
+    
+    private var betAmount = 5
+    
     var body: some View {
         
         ZStack{
@@ -23,8 +31,9 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: 45))
                 .edgesIgnoringSafeArea(.all)
             
+            
             VStack{
-                
+                Spacer()
                 //Title
                 HStack{
                     Image(systemName: "star.fill")
@@ -38,31 +47,33 @@ struct ContentView: View {
                         .foregroundColor(.yellow)
                 }.scaleEffect(2)
                 
+                Spacer()
                 //Credits counter
-                Text("Credits: 1000")
+                Text("Credits: \(credits)")
                     .foregroundColor(.black)
                     .padding(.all, 10.0)
                     .background(Color(.white).opacity(0.5))
                     .cornerRadius(20)
                 
                 //Cards
+                Spacer()
                 HStack{
                     
                     Spacer()
                     
-                    Image("apple")
+                    Image(symbols[numbers[0]])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .background(Color(.white).opacity(0.6))
                         .cornerRadius(20)
                     
-                    Image("apple")
+                    Image(symbols[numbers[1]])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .background(Color(.white).opacity(0.6))
                         .cornerRadius(20)
                     
-                    Image("apple")
+                    Image(symbols[numbers[2]])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .background(Color(.white).opacity(0.6))
@@ -71,18 +82,38 @@ struct ContentView: View {
                     Spacer()
                 }
                 
+                Spacer()
                 //Button
                 
                 Button(action: {
-                    //TODO
+                    
+                    self.numbers[0] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    self.numbers[1] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    self.numbers[2] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    //Check winnings
+                    if self.numbers[0] == self.numbers[1] &&
+                        self.numbers[1] == self.numbers[2] {
+                        
+                        //Won
+                        self.credits += self.betAmount * 10
+                    } else {
+                        self.credits -= self.betAmount
+                    }
+                    
                 }) {
                     Text("Spin")
                     .bold()
                         .foregroundColor(.white)
                         .padding(.all, 10.0)
-                        .background(Color(.systemPink))
+                        .padding([.leading, .trailing], 30)
+                        .background(Color.pink)
                     .cornerRadius(20)
                 }
+                
+                Spacer()
             }
         }
         
