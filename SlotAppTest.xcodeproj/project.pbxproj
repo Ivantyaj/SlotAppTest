@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2D7D7792451E6B90080E410 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7D7782451E6B90080E410 /* CardView.swift */; };
 		E2E03CC02451628900E4D80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E03CBF2451628900E4D80F /* AppDelegate.swift */; };
 		E2E03CC22451628900E4D80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E03CC12451628900E4D80F /* SceneDelegate.swift */; };
 		E2E03CC42451628900E4D80F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E03CC32451628900E4D80F /* ContentView.swift */; };
 		E2E03CC62451628D00E4D80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E03CC52451628D00E4D80F /* Assets.xcassets */; };
-		E2E03CC92451628D00E4D80F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E03CC82451628D00E4D80F /* Preview Assets.xcassets */; };
 		E2E03CCC2451628D00E4D80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E03CCA2451628D00E4D80F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2D7D7782451E6B90080E410 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E2E03CBC2451628900E4D80F /* SlotAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E03CBF2451628900E4D80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E03CC12451628900E4D80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2E03CC32451628900E4D80F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2E03CC52451628D00E4D80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2E03CC82451628D00E4D80F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2E03CCB2451628D00E4D80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2E03CCD2451628D00E4D80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,17 +62,9 @@
 				E2E03CC52451628D00E4D80F /* Assets.xcassets */,
 				E2E03CCA2451628D00E4D80F /* LaunchScreen.storyboard */,
 				E2E03CCD2451628D00E4D80F /* Info.plist */,
-				E2E03CC72451628D00E4D80F /* Preview Content */,
+				E2D7D7782451E6B90080E410 /* CardView.swift */,
 			);
 			path = SlotAppTest;
-			sourceTree = "<group>";
-		};
-		E2E03CC72451628D00E4D80F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E2E03CC82451628D00E4D80F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E03CCC2451628D00E4D80F /* LaunchScreen.storyboard in Resources */,
-				E2E03CC92451628D00E4D80F /* Preview Assets.xcassets in Resources */,
 				E2E03CC62451628D00E4D80F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +139,7 @@
 			files = (
 				E2E03CC02451628900E4D80F /* AppDelegate.swift in Sources */,
 				E2E03CC22451628900E4D80F /* SceneDelegate.swift in Sources */,
+				E2D7D7792451E6B90080E410 /* CardView.swift in Sources */,
 				E2E03CC42451628900E4D80F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
