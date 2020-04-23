@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var symbols = ["apple", "star", "cherry"]
     
     @State private var numbers = [0, 2, 1]
+    @State private var backgrounds = [Color.white, Color.white, Color.white]
     @State private var credits = 1000
     
     private var betAmount = 5
@@ -61,9 +62,9 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    CardView(symbol: $symbols[numbers[0]])
-                    CardView(symbol: $symbols[numbers[1]])
-                    CardView(symbol: $symbols[numbers[2]])
+                    CardView(symbol: $symbols[numbers[0]], bgColor: $backgrounds[1])
+                    CardView(symbol: $symbols[numbers[1]], bgColor: $backgrounds[1])
+                    CardView(symbol: $symbols[numbers[2]], bgColor: $backgrounds[1])
                     
                     
                     Spacer()
@@ -74,11 +75,15 @@ struct ContentView: View {
                 
                 Button(action: {
                     
-                    self.numbers[0] = Int.random(in: 0...self.symbols.count - 1)
+                    self.backgrounds = self.backgrounds.map { _ in
+                        Color.white
+                    }
                     
-                    self.numbers[1] = Int.random(in: 0...self.symbols.count - 1)
+                    self.numbers = self.numbers.map({ _ in
+                        Int.random(in: 0...self.symbols.count - 1)
+                    })
                     
-                    self.numbers[2] = Int.random(in: 0...self.symbols.count - 1)
+
                     
                     //Check winnings
                     if self.numbers[0] == self.numbers[1] &&
@@ -86,6 +91,11 @@ struct ContentView: View {
                         
                         //Won
                         self.credits += self.betAmount * 10
+                        
+                        // Update bg to green
+                        self.backgrounds = self.backgrounds.map { _ in
+                            Color.green
+                        }
                     } else {
                         self.credits -= self.betAmount
                     }
